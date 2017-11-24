@@ -1,9 +1,11 @@
-class Coffee {
-    name: string;
-    place: string;
+import { PlaceLocation } from "./PlaceLocation";
+import { TastingRating } from "./TastingRating";
+
+export class Coffee {
     type:string;
-    location: PlaceLocation;
     rating: number;
     notes: string;
     tastingRating: TastingRating;
+
+    constructor(public name: string, public place: string, public location: PlaceLocation){}
 }
