@@ -10,11 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GeolocationService } from './geolocation.service';
 import { DataService } from "./data.service";
+import { ListComponent } from './list/list.component';
+import { CoffeeComponent } from './coffee/coffee.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent,
+    CoffeeComponent
   ],
   imports: [
     BrowserModule,
