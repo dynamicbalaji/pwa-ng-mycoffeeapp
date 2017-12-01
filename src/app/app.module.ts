@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
          MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,8 +26,10 @@ import { CoffeeComponent } from './coffee/coffee.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
-    MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule
+    MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule,
+    MatFormFieldModule
   ],
   providers: [ GeolocationService, DataService ],
   bootstrap: [AppComponent]
