@@ -17,6 +17,12 @@
     <mat-input-container>
       <input matInput placeholder="Place Name" name="place" [(ngModel)]="coffee.place">
     </mat-input-container>
+    <mat-input-container>
+      <input matInput placeholder="Address" name="address" [(ngModel)]="coffee.location.address">
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput placeholder="City" name="city" [(ngModel)]="coffee.location.city">
+    </mat-input-container>
   </mat-card>
 
   <mat-card>
