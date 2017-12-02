@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Coffee } from '../logic/Coffee';
+import { TastingRating } from '../logic/TastingRating';
 import { GeolocationService } from '../geolocation.service';
 
 @Component({
@@ -29,6 +30,10 @@ export class CoffeeComponent implements OnInit {
       this.coffee.location.latitude = location.latitude;
       this.coffee.location.longitude = location.longitude;
     });
+  }
+
+  tastingRatingChanged(checked: boolean) {
+    this.coffee.tastingRating = checked ? new TastingRating() : null;
   }
 
   ngOnDestroy() {

@@ -1,6 +1,7 @@
 <form>
 
   <mat-card>
+    <mat-card-title>Basic Coffee Information</mat-card-title>
     <mat-input-container>
       <input matInput placeholder="Coffee Name" name="name" [(ngModel)]="coffee.name">
     </mat-input-container>
@@ -12,8 +13,9 @@
       </mat-select>
     </mat-form-field>
   </mat-card>
-
+  
   <mat-card>
+    <mat-card-title>Place Information</mat-card-title>
     <mat-input-container>
       <input matInput placeholder="Place Name" name="place" [(ngModel)]="coffee.place">
     </mat-input-container>
@@ -26,12 +28,16 @@
   </mat-card>
 
   <mat-card>
+    <mat-card-title>Ratings</mat-card-title>
     <mat-card-subtitle>Overall Ratings</mat-card-subtitle>
     <mat-slider [(ngModel)]="coffee.rating" thumbLabel min="0" max="10" tickInterval="1" 
         name="rating"></mat-slider>
-        <mat-slide-toggle #tastingSelector color="primary">
+        <mat-card-subtitle>
+        <mat-slide-toggle #tastingSelector color="primary" 
+          (change)="tastingRatingChanged(tastingSelector.checked)">
           Tasting Ratings
         </mat-slide-toggle>
+      </mat-card-subtitle>
         <section id="tasting" *ngIf="tastingSelector.checked">
           <label>Aroma</label>
           <mat-slider [(ngModel)]="coffee.tastingRating.aroma" thumbLabel min="0" max="10" tickInterval="1" 
@@ -62,7 +68,8 @@
   </mat-card>
 
   <mat-card>
-    {{ coffee | json }}
+    <button mat-raised-button (click)="close();">Close</button>
+    <button mat-raised-button color="primary" (click)="save();">Save</button>
   </mat-card>
 
 </form>
