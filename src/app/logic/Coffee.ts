@@ -11,5 +11,6 @@ export class Coffee {
                 public place: string = "", 
                 public location: PlaceLocation = null){
                     this.location = new PlaceLocation();
+                    this.tastingRating = new TastingRating();
                 }
 }

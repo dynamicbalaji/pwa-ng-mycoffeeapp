@@ -26,6 +26,35 @@
   </mat-card>
 
   <mat-card>
+    <mat-card-subtitle>Overall Ratings</mat-card-subtitle>
+    <mat-slider [(ngModel)]="coffee.rating" thumbLabel min="0" max="10" tickInterval="1" 
+        name="rating"></mat-slider>
+        <mat-slide-toggle #tastingSelector color="primary">
+          Tasting Ratings
+        </mat-slide-toggle>
+        <section id="tasting" *ngIf="tastingSelector.checked">
+          <label>Aroma</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.aroma" thumbLabel min="0" max="10" tickInterval="1" 
+              name="aroma"></mat-slider>
+          <label>Body</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.body" thumbLabel min="0" max="10" tickInterval="1" 
+              name="body"></mat-slider>
+          <label>Flavor</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.flavor" thumbLabel min="0" max="10" tickInterval="1" 
+              name="flavor"></mat-slider>
+          <label>Intensity</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.intensity" thumbLabel min="0" max="10" tickInterval="1" 
+              name="intensity"></mat-slider>
+          <label>Sweetness</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.sweetness" thumbLabel min="0" max="10" tickInterval="1" 
+              name="sweetness"></mat-slider>
+          <label>After Taste</label>
+          <mat-slider [(ngModel)]="coffee.tastingRating.aftertaste" thumbLabel min="0" max="10" tickInterval="1" 
+              name="aftertaste"></mat-slider>
+    </section>
+  </mat-card>
+
+  <mat-card>
     <mat-input-container>
       <textarea matInput placeholder="Notes" name="notes" [(ngModel)]="coffee.notes">
     </textarea>
