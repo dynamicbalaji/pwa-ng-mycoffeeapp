@@ -1,0 +1,2 @@
+{"name":"Frape Espresso","place":"Fake Place","location":{"address":"Fake Street","city":"Any City","latitude":12.7472585,"longitude":79.9849661},"tastingRating":{"aroma":1,"body":3,"flavor":3,"intensity":2,"sweetness":3,"aftertaste":2},"type":"Frappe","rating":3,"notes":"Murugan","_id":"j9ZiO99fQMvew4jf"}
+{"name":"Flat White","place":"Walmart","location":{"address":"DGTC","city":"Bentonville","latitude":12.7472585,"longitude":79.9849661},"tastingRating":{},"type":"Espresso","rating":7,"notes":"Testing","_id":"1Q3Y33covkvWRz4T"}
