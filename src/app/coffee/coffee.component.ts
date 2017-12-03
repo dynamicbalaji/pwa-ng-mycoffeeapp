@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Coffee } from '../logic/Coffee';
 import { TastingRating } from '../logic/TastingRating';
@@ -16,7 +16,8 @@ export class CoffeeComponent implements OnInit {
   types: string[] = ['Espresso', 'Cappuccino', 'Ristretto', 'Americano', 'Frappe'];
 
   constructor(private _route: ActivatedRoute,
-              private _geolocation: GeolocationService) { }
+              private _geolocation: GeolocationService,
+              private _router: Router) { }
 
   routingSubscription: any;
 
@@ -34,6 +35,10 @@ export class CoffeeComponent implements OnInit {
 
   tastingRatingChanged(checked: boolean) {
     this.coffee.tastingRating = checked ? new TastingRating() : null;
+  }
+
+  close() {
+    this._router.navigate(["/"]);
   }
 
   ngOnDestroy() {
