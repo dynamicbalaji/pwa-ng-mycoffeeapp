@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
          MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -27,6 +28,7 @@ import { CoffeeComponent } from './coffee/coffee.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
     MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule,
     MatFormFieldModule

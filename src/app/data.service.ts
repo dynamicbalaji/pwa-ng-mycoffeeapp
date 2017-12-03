@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 import { Coffee } from "./logic/Coffee";
 import { PlaceLocation } from "./logic/PlaceLocation";
@@ -6,7 +7,7 @@ import { PlaceLocation } from "./logic/PlaceLocation";
 @Injectable()
 export class DataService {
 
-  constructor() { }
+  constructor(private _http: Http) { }
 
   getList(callback) {
     // TODO: Change it with a real Web Service
