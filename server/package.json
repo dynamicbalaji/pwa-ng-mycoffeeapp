@@ -11,6 +11,7 @@
   "author": "Balaji Ashokkumar <dynamicbalaji4u@gmail.com> (BK)",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.4",
     "express-nedb-rest": "^1.2.4"
   }
 }
